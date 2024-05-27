@@ -1,0 +1,202 @@
+:root {
+  box-sizing: border-box;
+  --bg-color: #00c4f8;
+  --button-bg: #ff5f47;
+  --primary-white: #fafafa;
+}
+
+@font-face {
+  font-family: "PacificNorthwestRough";
+  src: url(../fonts/pacific-northwest-rough-letters.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  font-family: "PacificNorthwestRough", sans-serif;
+
+  @media (max-width: 768px) {
+    height: 100vh;
+    overflow: hidden;
+    scroll-behavior: none;
+    background-color: #00c4f7;
+  }
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.landing-content #playButton {
+  margin: 0;
+  z-index: 3;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.landing-content video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  transition: opacity 1s ease-out;
+  opacity: 1;
+}
+
+.landing-content video {
+  @media (max-width: 768px) {
+    object-fit: cover;
+    width: 100%;
+    height: 45%;
+    margin-top: 50%;
+  }
+
+  /*iPad screens*/
+  @media (min-width: 768px) and (max-width: 1024px) {
+    height: 70%;
+  }
+}
+
+#togglebtn {
+  border: none;
+  border-radius: 5px;
+  text-transform: capitalize;
+  width: 8rem;
+  height: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--button-bg);
+  color: var(--primary-white);
+  letter-spacing: 1px;
+  font-size: 20px;
+  z-index: 10;
+  font-family: "PacificNorthwestRough", sans-serif;
+}
+
+#togglebtn {
+  @media (max-width: 768px) {
+    width: 28%;
+    height: 1.8rem;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}
+
+#togglebtn:hover {
+  border: 2px solid var(--button-bg);
+  color: var(--button-bg);
+  background-color: var(--primary-white);
+  cursor: pointer;
+}
+
+.btn-flip {
+  opacity: 1;
+  outline: 0;
+  color: var(--primary-white);
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "PacificNorthwestRough", sans-serif;
+  margin: 36% 50% auto 50%;
+  font-size: 24px;
+  z-index: 3;
+}
+
+.btn-flip {
+  @media (max-width: 768px) {
+    letter-spacing: 1.5px;
+    width: 28%;
+  }
+}
+
+.btn-flip:hover::after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+
+.btn-flip:hover::before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+
+.btn-flip::after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  color: var(--primary-white);
+  display: block;
+  transition: 0.5s;
+  position: absolute;
+  background: var(--button-bg);
+  content: attr(data-back);
+  transform: translateY(-50%) rotateX(90deg);
+  border-radius: 5px;
+}
+
+.btn-flip::before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: var(--primary-white);
+  display: block;
+  padding: 0 30px;
+  line-height: 40px;
+  transition: 0.5s;
+  position: relative;
+  background: var(--button-bg);
+  content: attr(data-front);
+  transform: translateY(0) rotateX(0);
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .btn-flip::after {
+    content: "Dive In!";
+    transform: none;
+    opacity: 1;
+  }
+
+  .btn-flip:hover::after,
+  .btn-flip:hover::before {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/*iPad screens*/
+@media (min-width: 768px) and (max-width: 1081px) {
+  .btn-flip::after {
+    content: "Dive In!";
+    transform: none;
+    opacity: 1;
+  }
+}
+
+
+/*iPad screens*/
+@media (min-width: 768px) and (max-width: 1024px) {
+}
