@@ -51,8 +51,8 @@ body {
     padding: 0;
     justify-content: center;
     height: auto;
-    background: rgb(0, 196, 248);
-    -webkit-background: rgb(0, 196, 248);
+    background: #00c3fa;
+    -webkit-background: #00c3fa;
   }
 }
 
