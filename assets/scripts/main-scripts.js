@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   var svgElement = document.querySelector(".ham");
   var menuOptions = document.querySelector(".menu-options");
+  var backToTopButton = document.getElementById("backToTopButton");
 
   svgElement.addEventListener("click", function () {
     this.classList.toggle("active");
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       : "none";
   });
 
-  // Listener for closing the menu when clicking outside
+
   document.addEventListener("click", function (event) {
     if (
       !svgElement.contains(event.target) &&
@@ -30,5 +31,23 @@ document.addEventListener("DOMContentLoaded", function () {
         roadmapSection.getBoundingClientRect().top + window.pageYOffset - 60;
       window.scrollTo({ top: top, behavior: "smooth" });
     }
+  });
+
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 600) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  });
+
+
+  backToTopButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   });
 });

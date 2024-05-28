@@ -1,8 +1,18 @@
 :root {
-  --accent-text: var(--accent-text);
+  --accent-text: #414141;
   --roadmap-gradient: linear-gradient(transparent, rgb(0, 196, 248));
-  --page-gradient: linear-gradient(to bottom, #8ad9f7 0%, #00c4f8 40%, #00c4f8 100%);
-  --page-gradient-mobile: linear-gradient(to bottom, #8ad9f7 0%, #00c4f8 90%, #00c4f8 100%);
+  --page-gradient: linear-gradient(
+    to bottom,
+    #8ad9f7 0%,
+    #00c4f8 40%,
+    #00c4f8 100%
+  );
+  --page-gradient-mobile: linear-gradient(
+    to bottom,
+    #8ad9f7 0%,
+    #00c4f8 90%,
+    #00c4f8 100%
+  );
 }
 
 * {
@@ -18,7 +28,8 @@
   font-style: normal;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -235,7 +246,6 @@ body {
   }
 }
 
-
 .roadmap {
   position: relative;
   display: flex;
@@ -259,7 +269,6 @@ body {
   background: var(--bg-gradient);
   pointer-events: none;
 }
-
 .hamburgermenu {
   position: relative;
   display: flex;
@@ -325,14 +334,13 @@ body {
   width: 20.5rem;
   display: none;
 }
-
 .menu-options ul {
   display: flex;
   align-items: center;
-  align-content: center;
   justify-content: center;
   list-style: none;
   margin: 0;
+  padding: 0;
   background-color: #f3f3f3d7;
   border-radius: 8px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -340,15 +348,60 @@ body {
   text-transform: capitalize;
 }
 
+.menu-options ul li {
+  flex: 1;
+  text-align: center;
+}
+
 .menu-options ul li a {
   display: block;
   color: #414141;
   padding: 12px 18px;
   text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .menu-options ul li a:hover {
   background-color: #f1f1f1c7;
-  border-radius: 9px;
-  width: 100%;
+  border-radius: 8px;
+}
+
+
+.TOP {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+
+
+  svg {
+    width: 35px;
+  }
+
+  @media (max-width: 768px) {
+    right: 0.8rem;
+  }
+}
+
+#backToTopButton {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+  text-decoration: none;
+
+}
+
+#backToTopButton p {
+  margin: 0;
+  font-size: 22px;
+  color: var(--vc-accent-text);
+  text-align: center;
+  text-decoration: none;
+  color: var(--accent-text);
 }
