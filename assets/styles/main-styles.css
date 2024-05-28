@@ -50,7 +50,7 @@ body {
     padding: 0;
     justify-content: center;
     height: auto;
-    background: var(--page-gradient-mobile);
+    background-color: #00c4f8;
   }
 }
 
