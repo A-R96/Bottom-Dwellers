@@ -4,7 +4,7 @@
   --page-gradient: linear-gradient(
     to bottom,
     #8ad9f7 0%,
-    #00c4f8 40%,
+    #00c4f8 60%,
     #00c4f8 100%
   );
   --page-gradient-mobile: linear-gradient(
@@ -40,6 +40,7 @@ body {
   flex-direction: column;
   align-items: center;
   background: var(--page-gradient);
+  -webkit-background: var(--page-gradient);
   min-height: 100vh;
   font-family: "PacificNorthwestRough", sans-serif;
 }
@@ -50,7 +51,8 @@ body {
     padding: 0;
     justify-content: center;
     height: auto;
-    background: #00c4f8;
+    background: rgb(0, 196, 248);
+    -webkit-background: rgb(0, 196, 248);
   }
 }
 
