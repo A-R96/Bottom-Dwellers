@@ -33,6 +33,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  var descriptionLink = document.getElementById("description-button");
+  descriptionLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    var descriptionSection = document.querySelector("#description-button");
+
+    if (descriptionSection) {
+      var top =
+        descriptionSection.getBoundingClientRect().top + window.pageYOffset - 60;
+      window.scrollTo({ top: top, behavior: "smooth" });
+    }
+  });
+
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > 600) {
