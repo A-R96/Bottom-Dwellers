@@ -1,6 +1,7 @@
 :root {
   --accent-text: #414141;
   --roadmap-gradient: linear-gradient(transparent, rgb(0, 196, 248));
+  --button-bg: #ff5f47;
   --page-gradient: linear-gradient(
     to bottom,
     #8ad9f7 0%,
@@ -118,6 +119,7 @@ body {
   text-transform: capitalize;
   font-size: 32px;
   padding-bottom: 1rem;
+  color: var(--accent-text);
 
   @media (max-width: 768px) {
     font-size: 24px;
@@ -137,10 +139,11 @@ body {
   }
 }
 
-#roadmaph3 {
+#roadmap-title-text {
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 36px;
   color: var(--accent-text);
+  margin-top: 2rem;
 
   @media (max-width: 768px) {
     font-size: 32px;
@@ -152,8 +155,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 8rem auto;
-  width: 35%;
+  margin: 10rem auto;
+  width: 55%;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -161,6 +164,29 @@ body {
   }
 }
 
+
+.roadmap-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: var(--accent-text);
+  margin-top: 1rem;
+}
+
+.roadmap-text-wrapper h3{
+  font-size: 32px;
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+}
+
+.roadmap-text-wrapper p {
+  font-size: 24px;
+  text-align: center;
+  margin: .5rem auto;
+}
+
+
+/*
 .roadmap video {
   width: 100%;
   height: auto;
@@ -174,6 +200,7 @@ body {
     height: 45%;
   }
 }
+*/
 
 #bottomdwellerstitle {
   width: 32rem;
@@ -251,6 +278,7 @@ body {
   }
 }
 
+/*
 .roadmap {
   position: relative;
   display: flex;
@@ -274,6 +302,7 @@ body {
   background: var(--bg-gradient);
   pointer-events: none;
 }
+*/
 .hamburgermenu {
   position: relative;
   display: flex;
@@ -408,5 +437,14 @@ body {
   color: var(--vc-accent-text);
   text-align: center;
   text-decoration: none;
-  color: var(--accent-text);
+  color: var(--button-bg);
+}
+
+
+.custom-svg path {
+  fill: #ff5f47;
+  stroke: #000000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
