@@ -2,6 +2,7 @@
   --accent-text: #414141;
   --roadmap-gradient: linear-gradient(transparent, rgb(0, 196, 248));
   --button-bg: #ff5f47;
+  --default-background-color: #00c4f8;
   --page-gradient: linear-gradient(
     to bottom,
     #8ad9f7 0%,
@@ -10,8 +11,7 @@
   );
   --page-gradient-mobile: linear-gradient(
     to bottom,
-    #8ad9f7 0%,
-    #00c4f8 90%,
+    #1fc7f5 50%,
     #00c4f8 100%
   );
 }
@@ -52,8 +52,8 @@ body {
     padding: 0;
     justify-content: center;
     height: auto;
-    background: #00c3fa;
-    -webkit-background: #00c3fa;
+    background: var(--page-gradient-mobile);
+    -webkit-background: var(--page-gradient-mobile);
   }
 }
 
@@ -259,6 +259,7 @@ body {
   width: 100vw;
   height: 250px;
   overflow: hidden;
+  background-color: var(--default-background-color);
 
   @media (max-width: 768px) {
     width: 120vw;
