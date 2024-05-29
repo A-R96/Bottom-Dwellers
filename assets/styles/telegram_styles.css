@@ -119,6 +119,12 @@ body {
 }
 
 @media (max-width: 768px) {
+
+  .back-button-wrapper {
+    position: absolute;
+    top: 60%;
+  }
+
   .back-button-wrapper a {
     font-size: 18px;
     padding: 8px 17px;
