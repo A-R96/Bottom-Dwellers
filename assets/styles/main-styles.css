@@ -225,6 +225,7 @@ body {
   padding: 0;
   margin: 0;
   letter-spacing: 1.5px;
+  color: #313131;
 
   @media (max-width: 768px) {
     font-size: 46px;
