@@ -18,30 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     button.addEventListener('click', () => {
         video.play();
-        video.style.opacity = 1;
-        button.style.display = 'none';
+        video.style.opacity = 1; // Ensure video is fully visible when playing
+        button.style.display = 'none'; // Hide the play button
     });
 
-    // Event listener to handle the end of the video
     video.addEventListener('ended', () => {
-        console.log('Video ended, redirecting...');
         window.location.href = 'main.html'; // Redirect when video ends
     });
-
-    // Ensure the video plays when the button is clicked even if it's in the middle
-    video.addEventListener('play', () => {
-        video.style.opacity = 1;
-        button.style.display = 'none';
-    });
-
-    video.addEventListener('pause', () => {
-        video.style.opacity = 0.5;
-    });
-
 });
 
 // Skip button
 const toggleVideo = () => {
-    console.log('Skipping video, redirecting...');
     window.location.href = 'main.html';
 };
