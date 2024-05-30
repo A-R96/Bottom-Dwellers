@@ -42,7 +42,7 @@ For more information, feel free to reach out:
 
 ## Contributors
 
-- **Schwan.xrd** - [Twitter](https://github.com/A-R96)
+- **Schwan.xrd** - [Twitter](https://twitter.com/GeneralSedgwick)
 - **Isaac.xrd** - [Twitter](https://twitter.com/isaac_XRD)
 - **GREEZELOUISE.xrd** - [Twitter](https://twitter.com/GREEZELOUISE)
 ---
